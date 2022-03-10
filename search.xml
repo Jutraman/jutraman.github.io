@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo</title>
+    <url>/cs/network/hexo/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>静态博客</li>
+<li>基于 Node.js</li>
+<li>适用于 Windows，MacOS，Linux 等系统</li>
+<li>官方文档 <a class="link" target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>本文使用的机器环境为 </p>
+<h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h3><ul>
+<li>macOS Monterey 12+</li>
+<li>Node.js 17.6</li>
+<li>npm 8.5</li>
+<li>Hexo 6.0</li>
+<li>OpenSSH 8.6</li>
+<li>Git 2.32</li>
+</ul>
+<h3 id="服务器端"><a href="#服务器端" class="headerlink" title="服务器端"></a>服务器端</h3><ul>
+<li>Alibaba Cloud Linux release 3</li>
+<li>Apache 2.4.37</li>
+<li>OpenSSH 8.0</li>
+<li>Git 2.27</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新</span>
+brew <span class="token function">install</span> <span class="token function">node</span>
+brew <span class="token function">install</span> openssh
+brew <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>到底能不能</p>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Website</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SSH</title>
+    <url>/uncategorized/ssh/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/uncategorized/git/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+</search>
