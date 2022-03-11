@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://139.224.215.237/about/</loc>
+    <loc>http://139.224.215.237/categories/</loc>
     
     <lastmod>2022-03-11</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>http://139.224.215.237/categories/</loc>
+    <loc>http://139.224.215.237/about/</loc>
     
     <lastmod>2022-03-11</lastmod>
     
