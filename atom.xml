@@ -6,7 +6,7 @@
   <link href="http://139.224.215.237/atom.xml" rel="self"/>
   
   <link href="http://139.224.215.237/"/>
-  <updated>2022-03-11T09:53:50.069Z</updated>
+  <updated>2022-03-11T14:23:40.455Z</updated>
   <id>http://139.224.215.237/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo+Github</title>
+    <link href="http://139.224.215.237/cs/network/hexo-github/"/>
+    <id>http://139.224.215.237/cs/network/hexo-github/</id>
+    <published>2022-03-11T14:05:09.000Z</published>
+    <updated>2022-03-11T14:23:40.455Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link"   target="_blank" rel="noopener" href="http://jutraman.tech/cs/network/hexo-apache/" >http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p><ul><li>node.js</li><li>Hexo</li><li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:    type: git    repo: git@github.com:user_name&#x2F;user_name.github.io    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li><li>SSH<ul><li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li><li>私钥和上篇博文一样处理</li></ul></li></ul><h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol><li>新建 repository<ul><li>Owner: user_name</li><li>Repo name: user_name.github.io  # 这个名字是必须的</li><li>Public</li></ul></li><li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li></ol><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前置工作&quot;&gt;&lt;a href=&quot;#前置工作&quot; class=&quot;headerlink&quot; title=&quot;前置工作&quot;&gt;&lt;/a&gt;前置工作&lt;/h2&gt;&lt;p&gt;具体步骤参考 &lt;code&gt;Hexo+apache&lt;/code&gt; &lt;a class=&quot;link&quot;   target=&quot;_bla</summary>
+      
+    
+    
+    
+    <category term="CS" scheme="http://139.224.215.237/categories/CS/"/>
+    
+    <category term="Network" scheme="http://139.224.215.237/categories/CS/Network/"/>
+    
+    
+    <category term="Blog" scheme="http://139.224.215.237/tags/Blog/"/>
+    
+    <category term="Website" scheme="http://139.224.215.237/tags/Website/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+Apache</title>

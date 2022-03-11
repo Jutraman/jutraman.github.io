@@ -10,7 +10,7 @@
     
     <title>
         
-            Tag: Remote Access |
+            Hexo+Github |
         
         Jutraman&#39;s WorkStation
     </title>
@@ -86,7 +86,7 @@
                         </li>
                     
                         <li class="menu-item">
-                            <a class="active" href="/tags">
+                            <a class href="/tags">
                                 TAGS
                             </a>
                         </li>
@@ -131,7 +131,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active" href="/tags">TAGS</a>
+                    <a class href="/tags">TAGS</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -154,45 +154,206 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="tag-container">
-        <div class="tag-name"><i class="fas fa-tag"></i>&nbsp;Remote Access
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Hexo+Github</span>
         </div>
-        <div class="tag-post-list">
-            
-<div class="archive-list-container">
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/mylogo.png">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Jutraman</span>
+                        
+                            <span class="author-label">Newbee</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-03-11 22:05:09</span>
+        <span class="mobile">2022-03-11 22:05</span>
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2022</span>
-                <span class="archive-year-post-count">[2]</span>
-            </div>
-            <ul class="article-list">
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title" href="/cs/network/ssh/">SSH</a>
-                        <span class="article-date">03-11</span>
+                    <li>
+                        <a href="/categories/CS/">CS</a>&nbsp;
                     </li>
                 
-                    <li class="article-item">
-                        <a class="article-title" href="/cs/network/git/">Git</a>
-                        <span class="article-date">03-10</span>
+                    <li>
+                        &gt; <a href="/categories/CS/Network/">Network</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Blog/">Blog</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Website/">Website</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>132 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link" target="_blank" rel="external nofollow noopener noreferrer" href="http://jutraman.tech/cs/network/hexo-apache/">http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p>
+<ul>
+<li>node.js</li>
+<li>Hexo</li>
+<li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:
+    type: git
+    repo: git@github.com:user_name&#x2F;user_name.github.io
+    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>SSH<ul>
+<li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li>
+<li>私钥和上篇博文一样处理</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol>
+<li>新建 repository<ul>
+<li>Owner: user_name</li>
+<li>Repo name: user_name.github.io  # 这个名字是必须的</li>
+<li>Public</li>
+</ul>
+</li>
+<li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li>
+</ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
         </div>
-    </div>
 
-    <div class="tag-paginator">
-        <div class="paginator">
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/Blog/">#Blog</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Website/">#Website</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next" rel="next" href="/cs/network/hexo-apache/">
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Hexo+Apache</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments">&nbsp;Comments</i>
+    </div>
     
 
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: '2b230061dfef285e2524',
+                    clientSecret: 'fdd9b65901cb4897a5b1a8bedc1dc4dbc6878e22',
+                    repo: 'jutraman.github.io',
+                    owner: 'Jutraman',
+                    admin: ['Jutraman'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
     
 </div>
 
+            </div>
+        
     </div>
 </div>
 
@@ -240,6 +401,27 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -291,6 +473,14 @@
 
     </div>
 
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BD%AE%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">前置工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF-Github-com"><span class="nav-number">2.</span> <span class="nav-text">服务器端(Github.com)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">3.</span> <span class="nav-text">测试</span></a></li></ol>
+    </div>
+</div>
+        </aside>
     
 
     <div class="image-viewer-container">
@@ -357,6 +547,14 @@
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
     
 </div>
 
