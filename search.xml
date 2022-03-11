@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git</title>
+    <url>/cs/git/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hexo</title>
     <url>/cs/network/hexo/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -42,11 +47,6 @@ brew <span class="token function">install</span> <span class="token function">gi
   <entry>
     <title>SSH</title>
     <url>/cs/ssh/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Git</title>
-    <url>/cs/git/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>
