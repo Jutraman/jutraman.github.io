@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git</title>
-    <url>/cs/network/git/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Remote Access</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo+Apache</title>
     <url>/cs/network/hexo-apache/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -176,6 +164,18 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
         <tag>Remote Access</tag>
         <tag>Blog</tag>
         <tag>Encryption</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/cs/network/git/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Remote Access</tag>
       </tags>
   </entry>
 </search>
