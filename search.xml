@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SSH</title>
+    <url>/cs/network/ssh/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Remote Access</tag>
+        <tag>Encryption</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git</title>
     <url>/cs/network/git/</url>
     <content><![CDATA[]]></content>
@@ -162,20 +176,6 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
       <tags>
         <tag>Blog</tag>
         <tag>Website</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SSH</title>
-    <url>/cs/network/ssh/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Remote Access</tag>
-        <tag>Blog</tag>
-        <tag>Encryption</tag>
       </tags>
   </entry>
 </search>
