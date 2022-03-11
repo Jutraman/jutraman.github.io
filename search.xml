@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>SSH</title>
+    <url>/uncategory/ssh/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Hexo</title>
     <url>/cs/network/hexo/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -151,11 +156,6 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
         <tag>Blog</tag>
         <tag>Website</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>SSH</title>
-    <url>/uncategory/ssh/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>Git</title>
