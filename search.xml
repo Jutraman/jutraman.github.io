@@ -11,10 +11,12 @@
 </ul>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>本文使用的机器环境为 </p>
 <ul>
-<li>客户端</li>
+<li>客户端<ul>
+<li>macOS Monterey 12+</li>
+</ul>
+</li>
 </ul>
 <ul>
-<li>macOS Monterey 12+</li>
 <li>Node.js 17.6</li>
 <li>npm 8.5</li>
 <li>Hexo 6.0</li>
