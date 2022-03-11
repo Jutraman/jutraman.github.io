@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git</title>
-    <url>/uncategory/git/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hexo</title>
     <url>/cs/network/hexo/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -29,12 +24,46 @@
 <li>OpenSSH 8.0</li>
 <li>Git 2.27</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新</span>
-brew <span class="token function">install</span> <span class="token function">node</span>
-brew <span class="token function">install</span> openssh
-brew <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>到底能不能</p>
-]]></content>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新
+brew install node
+brew install openssh
+brew install git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli
+## 局部安装
+# npm install hexo
+## hexo是 Hexo 实际依赖的主题命令包，hexo-cli全称 hexo command line interface，是命令行全局指令，会自动将 hexo 安装到目标文件夹的 node_modules 目录下<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 初始化博客根目录
+hexo init &lt;folder&gt; 
+# 在默认安装情况下，hexo 命令只在根目录下生效
+cd &lt;folder&gt;
+# 安装必要的 node.js 模块
+npm install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h4><p>根目录如下：</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">.
+├── _config.yml # Hexo 配置文件
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>直接修改配置文件 _config.yml </p>
+<p>具体每项参数参考官方文档，本文采用远程服务器做 Hexo Server， 所以部署(deploy)部分需要强调：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> user_name@remote_server_ip<span class="token punctuation">:</span>remote_server_git_folder
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+
+<span class="token comment">## 以下是我的配置示例</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@x.x.x.x<span class="token punctuation">:</span>/var/www/blog/hexo.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Theme-配置"><a href="#Theme-配置" class="headerlink" title="Theme 配置"></a>Theme 配置</h4>]]></content>
       <categories>
         <category>CS</category>
         <category>Network</category>
@@ -47,6 +76,11 @@ brew <span class="token function">install</span> <span class="token function">gi
   <entry>
     <title>SSH</title>
     <url>/uncategory/ssh/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/uncategory/git/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>

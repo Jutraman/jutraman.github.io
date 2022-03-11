@@ -215,7 +215,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>128 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>339 Words</span>
         </span>
     
     
@@ -257,12 +257,46 @@
 <li>OpenSSH 8.0</li>
 <li>Git 2.27</li>
 </ul>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新</span>
-brew <span class="token function">install</span> <span class="token function">node</span>
-brew <span class="token function">install</span> openssh
-brew <span class="token function">install</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>到底能不能</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新
+brew install node
+brew install openssh
+brew install git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli
+## 局部安装
+# npm install hexo
+## hexo是 Hexo 实际依赖的主题命令包，hexo-cli全称 hexo command line interface，是命令行全局指令，会自动将 hexo 安装到目标文件夹的 node_modules 目录下<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 初始化博客根目录
+hexo init &lt;folder&gt; 
+# 在默认安装情况下，hexo 命令只在根目录下生效
+cd &lt;folder&gt;
+# 安装必要的 node.js 模块
+npm install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h4 id="Hexo-配置"><a href="#Hexo-配置" class="headerlink" title="Hexo 配置"></a>Hexo 配置</h4><p>根目录如下：</p>
+<pre class="line-numbers language-dir" data-language="dir"><code class="language-dir">.
+├── _config.yml # Hexo 配置文件
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>直接修改配置文件 _config.yml </p>
+<p>具体每项参数参考官方文档，本文采用远程服务器做 Hexo Server， 所以部署(deploy)部分需要强调：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> user_name@remote_server_ip<span class="token punctuation">:</span>remote_server_git_folder
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+
+<span class="token comment">## 以下是我的配置示例</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> git
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> git@x.x.x.x<span class="token punctuation">:</span>/var/www/blog/hexo.git
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Theme-配置"><a href="#Theme-配置" class="headerlink" title="Theme 配置"></a>Theme 配置</h4>
         </div>
 
         
@@ -480,7 +514,7 @@ brew <span class="token function">install</span> <span class="token function">gi
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">2.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF"><span class="nav-number">2.2.</span> <span class="nav-text">服务器端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BF%85%E5%A4%87%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">安装必备程序</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="nav-number">2.1.</span> <span class="nav-text">客户端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF"><span class="nav-number">2.2.</span> <span class="nav-text">服务器端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BF%85%E5%A4%87%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.1.</span> <span class="nav-text">安装必备程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Hexo"><span class="nav-number">3.2.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%BA%E7%AB%99"><span class="nav-number">3.3.</span> <span class="nav-text">建站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE"><span class="nav-number">3.4.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hexo-%E9%85%8D%E7%BD%AE"><span class="nav-number">3.4.1.</span> <span class="nav-text">Hexo 配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Theme-%E9%85%8D%E7%BD%AE"><span class="nav-number">3.4.2.</span> <span class="nav-text">Theme 配置</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
