@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Test</title>
-    <url>/cs/test/</url>
+    <title>Git</title>
+    <url>/cs/git/</url>
     <content><![CDATA[]]></content>
-      <categories>
-        <category>CS</category>
-      </categories>
   </entry>
   <entry>
     <title>Hexo</title>
@@ -53,8 +50,11 @@ brew <span class="token function">install</span> <span class="token function">gi
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Git</title>
-    <url>/cs/git/</url>
+    <title>Test</title>
+    <url>/cs/test/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>CS</category>
+      </categories>
   </entry>
 </search>
