@@ -11,26 +11,24 @@
 </ul>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>本文使用的机器环境为 </p>
 <ul>
-<li>客户端<ul>
-<li>macOS Monterey 12+</li>
-</ul>
-</li>
-</ul>
+<li><p>客户端</p>
 <ul>
+<li>macOS Monterey 12+</li>
 <li>Node.js 17.6</li>
 <li>npm 8.5</li>
 <li>Hexo 6.0</li>
 <li>OpenSSH 8.6</li>
 <li>Git 2.32</li>
 </ul>
-<ul>
-<li>服务器端</li>
-</ul>
+</li>
+<li><p>服务器端</p>
 <ul>
 <li>Alibaba Cloud Linux release 3</li>
 <li>Apache 2.4.37</li>
 <li>OpenSSH 8.0</li>
 <li>Git 2.27</li>
+</ul>
+</li>
 </ul>
 <hr>
 <h2 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h2><h4 id="安装必备程序"><a href="#安装必备程序" class="headerlink" title="安装必备程序"></a>安装必备程序</h4><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## macOS 有多种安装方式，这里使用 brew，如果系统有预装版本，不需要更新
