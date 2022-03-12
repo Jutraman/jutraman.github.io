@@ -200,13 +200,13 @@
 
                 <div class="home-article-content markdown-body">
                     
-                        起源
+                        概述
 Larry Page
 Google
 不是网页排名的唯一算法
 最早最著名的算法
 
-概述
+算法
 链接分析算法
 基于图论：网页是结点，超链接是边，权威性是权重
 系列算法：根据比较点不同有多种变种和优化
@@ -744,5 +744,20 @@ npm...
 
 
 
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>

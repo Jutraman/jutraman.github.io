@@ -3,13 +3,13 @@
   <entry>
     <title>PageRank</title>
     <url>/cs/network/pagerank/</url>
-    <content><![CDATA[<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><ul>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>Larry Page</li>
 <li>Google</li>
 <li>不是网页排名的唯一算法</li>
 <li>最早最著名的算法</li>
 </ul>
-<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
 <li>链接分析算法</li>
 <li>基于图论：网页是结点，超链接是边，权威性是权重</li>
 <li>系列算法：根据比较点不同有多种变种和优化</li>
