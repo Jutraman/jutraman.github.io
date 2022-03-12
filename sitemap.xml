@@ -92,6 +92,13 @@
 
   
   <url>
+    <loc>http://139.224.215.237/tags/Remote-Access/</loc>
+    <lastmod>2022-03-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://139.224.215.237/tags/Blog/</loc>
     <lastmod>2022-03-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -106,7 +113,7 @@
   </url>
   
   <url>
-    <loc>http://139.224.215.237/tags/Remote-Access/</loc>
+    <loc>http://139.224.215.237/tags/Search-Engine/</loc>
     <lastmod>2022-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -114,13 +121,6 @@
   
   <url>
     <loc>http://139.224.215.237/tags/Encryption/</loc>
-    <lastmod>2022-03-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://139.224.215.237/tags/Search-Engine/</loc>
     <lastmod>2022-03-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
