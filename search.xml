@@ -13,7 +13,7 @@
 <li>链接分析算法</li>
 <li>基于图论：网页是结点，超链接是边，权威性是权重</li>
 <li>系列算法：根据比较点不同有多种变种和优化</li>
-<li>$ PR(p<em>i) = \frac{1-d}{N} + d\times\sum</em>{p_j\inM(p_i)} {PR(p_j)\overL(p_j)}$</li>
+<li>$ PR(p<em>i) = \frac{1-d}{N} + d \times \sum</em>{p_j\inM(p_i)} {PR(p_j)\overL(p_j)}$</li>
 </ul>
 ]]></content>
       <categories>
@@ -208,8 +208,8 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
         <category>Network</category>
       </categories>
       <tags>
-        <tag>Remote Access</tag>
         <tag>Blog</tag>
+        <tag>Remote Access</tag>
         <tag>Encryption</tag>
       </tags>
   </entry>
