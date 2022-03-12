@@ -1,6 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>PageRank</title>
+    <url>/cs/network/pagerank/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>Larry Page</li>
+<li>Google</li>
+<li>不是网页排名的唯一算法</li>
+<li>最早最著名的算法</li>
+</ul>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li>链接分析算法</li>
+<li>基于图论：网页是结点，超链接是边，权威性是权重</li>
+<li>系列算法：根据比较点不同有多种变种和优化</li>
+<li>迭代</li>
+<li><img src="PageRank/img/pr.svg" alt="PR" title="PageRank"></li>
+</ul>
+]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Website</tag>
+        <tag>Search Engine</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+Github</title>
+    <url>/cs/network/hexo-github/</url>
+    <content><![CDATA[<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link"   target="_blank" rel="noopener" href="http://jutraman.tech/cs/network/hexo-apache/" >http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p>
+<ul>
+<li>node.js</li>
+<li>Hexo</li>
+<li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:
+    type: git
+    repo: git@github.com:user_name&#x2F;user_name.github.io
+    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>SSH<ul>
+<li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li>
+<li>私钥和上篇博文一样处理</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol>
+<li>新建 repository<ul>
+<li>Owner: user_name</li>
+<li>Repo name: user_name.github.io  # 这个名字是必须的</li>
+<li>Public</li>
+</ul>
+</li>
+<li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li>
+</ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Website</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+Apache</title>
     <url>/cs/network/hexo-apache/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -139,39 +201,17 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
       </tags>
   </entry>
   <entry>
-    <title>Hexo+Github</title>
-    <url>/cs/network/hexo-github/</url>
-    <content><![CDATA[<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link"   target="_blank" rel="noopener" href="http://jutraman.tech/cs/network/hexo-apache/" >http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p>
-<ul>
-<li>node.js</li>
-<li>Hexo</li>
-<li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:
-    type: git
-    repo: git@github.com:user_name&#x2F;user_name.github.io
-    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>SSH<ul>
-<li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li>
-<li>私钥和上篇博文一样处理</li>
-</ul>
-</li>
-</ul>
-<h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol>
-<li>新建 repository<ul>
-<li>Owner: user_name</li>
-<li>Repo name: user_name.github.io  # 这个名字是必须的</li>
-<li>Public</li>
-</ul>
-</li>
-<li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li>
-</ol>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    <title>SSH</title>
+    <url>/cs/network/ssh/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>CS</category>
         <category>Network</category>
       </categories>
       <tags>
+        <tag>Remote Access</tag>
         <tag>Blog</tag>
-        <tag>Website</tag>
+        <tag>Encryption</tag>
       </tags>
   </entry>
   <entry>
@@ -184,46 +224,6 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
       </categories>
       <tags>
         <tag>Remote Access</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PageRank</title>
-    <url>/cs/network/pagerank/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>Larry Page</li>
-<li>Google</li>
-<li>不是网页排名的唯一算法</li>
-<li>最早最著名的算法</li>
-</ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
-<li>链接分析算法</li>
-<li>基于图论：网页是结点，超链接是边，权威性是权重</li>
-<li>系列算法：根据比较点不同有多种变种和优化</li>
-<li>迭代</li>
-<li><img src="https://www.latexlive.com/#UFIocF9pKT0lNUNmcmFjJTdCMS1kJTdEJTdCTiU3RCUyMCtkJTVDc3VtJTVFbl8lN0JwX2olNUNpbiUyME0ocF9pKSU3RCU3QiU1Q2ZyYWMlN0JQUihwX2opJTdEJTdCTChwX2opJTdEJTdE" alt="PR"></li>
-</ul>
-]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Website</tag>
-        <tag>Search Engine</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SSH</title>
-    <url>/cs/network/ssh/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-        <tag>Remote Access</tag>
-        <tag>Encryption</tag>
       </tags>
   </entry>
 </search>
