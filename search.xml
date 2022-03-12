@@ -15,7 +15,7 @@
 <li>系列算法：根据比较点不同有多种变种和优化</li>
 <li>迭代</li>
 </ul>
-<p>$PR(p<em>i)=\frac{1-d}{N} +d\sum^{}</em>{p_j\in M(p_i)}\frac{PR(p_j)}{L(p_j)}$</p>
+<p>$PR(p<em>i)=\frac{1-d}{N} +d\sum^n</em>{p_j\in M(p_i)}{\frac{PR(p_j)}{L(p_j)}}$</p>
 <ul>
 <li>d=0.85</li>
 </ul>
