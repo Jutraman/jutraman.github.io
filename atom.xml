@@ -6,7 +6,7 @@
   <link href="http://139.224.215.237/atom.xml" rel="self"/>
   
   <link href="http://139.224.215.237/"/>
-  <updated>2022-03-11T14:23:40.455Z</updated>
+  <updated>2022-03-12T13:28:34.565Z</updated>
   <id>http://139.224.215.237/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PageRank</title>
+    <link href="http://139.224.215.237/cs/network/pagerank/"/>
+    <id>http://139.224.215.237/cs/network/pagerank/</id>
+    <published>2022-03-12T09:35:12.000Z</published>
+    <updated>2022-03-12T13:28:34.565Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><ul><li>Larry Page</li><li>Google</li><li>不是网页排名的唯一算法</li><li>最早最著名的算法</li></ul><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul><li>链接分析算法</li><li>基于图论：网页是结点，超链接是边，权威性是权重</li><li>系列算法：根据比较点不同有多种变种和优化</li><li>$ PR(X)\quad&#x3D;\quad\sum^{x \to \infty}_{y \to 0}{\frac{x}{y}} $</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;起源&quot;&gt;&lt;a href=&quot;#起源&quot; class=&quot;headerlink&quot; title=&quot;起源&quot;&gt;&lt;/a&gt;起源&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Larry Page&lt;/li&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;不是网页排名的唯一算法&lt;/li&gt;
+&lt;li&gt;最早最著名的算</summary>
+      
+    
+    
+    
+    <category term="CS" scheme="http://139.224.215.237/categories/CS/"/>
+    
+    <category term="Network" scheme="http://139.224.215.237/categories/CS/Network/"/>
+    
+    
+    <category term="Website" scheme="http://139.224.215.237/tags/Website/"/>
+    
+    <category term="Search Engine" scheme="http://139.224.215.237/tags/Search-Engine/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo+Github</title>
