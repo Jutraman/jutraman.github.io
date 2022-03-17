@@ -201,11 +201,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Remote-Access/">Remote Access</a>&nbsp;
+                        <a href="/tags/Blog/">Blog</a>&nbsp;
                     </li>
                 
                     <li>
-                        | <a href="/tags/Blog/">Blog</a>&nbsp;
+                        | <a href="/tags/Remote-Access/">Remote Access</a>&nbsp;
                     </li>
                 
                     <li>
@@ -217,6 +217,10 @@
     
 
     
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>187 Words</span>
+        </span>
     
     
         <span class="article-min2read article-meta-item">
@@ -236,7 +240,37 @@
         
 
         <div class="article-content markdown-body">
-            
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>网络协议</li>
+<li>加密通讯</li>
+<li>OpenSSH</li>
+</ul>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ol>
+<li>远程主机收到用户的登录请求，将公钥发给用户；</li>
+<li>用户使用公钥，将登录密码加密后，发送给主机；</li>
+<li>远程主机用自己的私钥，解密密码。</li>
+</ol>
+<h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>密钥本身没有证书中心（CA）公证，攻击者可以冒充服务器，截取登录密码，进而登录服务器。</p>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 登录
+ssh user@host
+
+## 加密
+ssh-keygen
+
+## 拷贝密钥
+ssh-copy-id
+
+## 添加密钥
+ssh-add
+
+## 详细指令
+ssh [-B bind_interface] [-b bind_address] [-c cipher_spec] 
+    [-D [bind_address:]port][-E log_file] [-e escape_char] 
+    [-F configfile] [-I pkcs11] [-i identity_file] 
+    [-J [user@]host[:port]] [-L address] [-l login_name] 
+    [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]
+    [-Q query_option] [-R address] [-S ctl_path] [-W host:port]
+    [-w local_tun[:remote_tun]] destination [command]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
         </div>
 
         
@@ -245,11 +279,11 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/Remote-Access/">#Remote Access</a>&nbsp;
+                        <a href="/tags/Blog/">#Blog</a>&nbsp;
                     </li>
                 
                     <li class="tag-item">
-                        <a href="/tags/Blog/">#Blog</a>&nbsp;
+                        <a href="/tags/Remote-Access/">#Remote Access</a>&nbsp;
                     </li>
                 
                     <li class="tag-item">
@@ -470,7 +504,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AD%E9%97%B4%E4%BA%BA%E6%94%BB%E5%87%BB"><span class="nav-number">3.</span> <span class="nav-text">中间人攻击</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">基本操作</span></a></li></ol>
     </div>
 </div>
         </aside>

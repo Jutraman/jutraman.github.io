@@ -112,8 +112,20 @@
     <link href="http://139.224.215.237/cs/network/ssh/"/>
     <id>http://139.224.215.237/cs/network/ssh/</id>
     <published>2022-03-10T23:13:49.000Z</published>
-    <updated>2022-03-12T15:44:47.383Z</updated>
+    <updated>2022-03-17T02:05:13.632Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul><li>网络协议</li><li>加密通讯</li><li>OpenSSH</li></ul><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ol><li>远程主机收到用户的登录请求，将公钥发给用户；</li><li>用户使用公钥，将登录密码加密后，发送给主机；</li><li>远程主机用自己的私钥，解密密码。</li></ol><h2 id="中间人攻击"><a href="#中间人攻击" class="headerlink" title="中间人攻击"></a>中间人攻击</h2><p>密钥本身没有证书中心（CA）公证，攻击者可以冒充服务器，截取登录密码，进而登录服务器。</p><h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 登录ssh user@host## 加密ssh-keygen## 拷贝密钥ssh-copy-id## 添加密钥ssh-add## 详细指令ssh [-B bind_interface] [-b bind_address] [-c cipher_spec]     [-D [bind_address:]port][-E log_file] [-e escape_char]     [-F configfile] [-I pkcs11] [-i identity_file]     [-J [user@]host[:port]] [-L address] [-l login_name]     [-m mac_spec] [-O ctl_cmd] [-o option] [-p port]    [-Q query_option] [-R address] [-S ctl_path] [-W host:port]    [-w local_tun[:remote_tun]] destination [command]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;网络协议&lt;/li&gt;
+&lt;li&gt;加密通讯&lt;/li&gt;
+&lt;li&gt;OpenSSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a hr</summary>
+      
     
     
     
@@ -122,9 +134,9 @@
     <category term="Network" scheme="http://139.224.215.237/categories/CS/Network/"/>
     
     
-    <category term="Remote Access" scheme="http://139.224.215.237/tags/Remote-Access/"/>
-    
     <category term="Blog" scheme="http://139.224.215.237/tags/Blog/"/>
+    
+    <category term="Remote Access" scheme="http://139.224.215.237/tags/Remote-Access/"/>
     
     <category term="Encryption" scheme="http://139.224.215.237/tags/Encryption/"/>
     
