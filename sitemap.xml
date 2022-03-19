@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://139.224.215.237/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/</loc>
+    
+    <lastmod>2022-03-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://139.224.215.237/cs/network/ssh/</loc>
     
     <lastmod>2022-03-17</lastmod>
@@ -85,43 +94,50 @@
 
   <url>
     <loc>http://139.224.215.237/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://139.224.215.237/tags/Remote-Access/</loc>
+    <lastmod>2022-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://139.224.215.237/tags/Blog/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://139.224.215.237/tags/Website/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://139.224.215.237/tags/Search-Engine/</loc>
-    <lastmod>2022-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://139.224.215.237/tags/Remote-Access/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://139.224.215.237/tags/Encryption/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://139.224.215.237/tags/Deep-Learning/</loc>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -130,14 +146,21 @@
   
   <url>
     <loc>http://139.224.215.237/categories/CS/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://139.224.215.237/categories/CS/Network/</loc>
-    <lastmod>2022-03-17</lastmod>
+    <lastmod>2022-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://139.224.215.237/categories/CS/AI/</loc>
+    <lastmod>2022-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
