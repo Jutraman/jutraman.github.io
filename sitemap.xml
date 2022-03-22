@@ -122,13 +122,6 @@
   </url>
   
   <url>
-    <loc>http://139.224.215.237/tags/Search-Engine/</loc>
-    <lastmod>2022-03-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://139.224.215.237/tags/Encryption/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -137,6 +130,13 @@
   
   <url>
     <loc>http://139.224.215.237/tags/Deep-Learning/</loc>
+    <lastmod>2022-03-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://139.224.215.237/tags/Search-Engine/</loc>
     <lastmod>2022-03-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

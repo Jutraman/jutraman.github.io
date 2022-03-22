@@ -13,4 +13,5 @@ Disallow: /images/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: http://139.224.215.237/sitemap.xml
+Sitemap: www.jutraman.tech/sitemap.xml
+Baidusitemap: www.jutraman.tech/baidusitemap.xml
