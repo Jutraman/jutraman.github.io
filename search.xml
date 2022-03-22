@@ -1,125 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Git</title>
-    <url>/cs/network/git/</url>
-    <content><![CDATA[<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
-<li>分布式</li>
-<li>按照元数据存储</li>
-<li>有分支，但没有全局版本号</li>
-<li>SHA-1</li>
+    <title>动手学深度学习-学习笔记1</title>
+    <url>/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>CS</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>Deep Learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PageRank</title>
+    <url>/cs/network/pagerank/</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>Larry Page</li>
+<li>Google</li>
+<li>不是网页排名的唯一算法</li>
+<li>最早最著名的算法</li>
 </ul>
-<h2 id="工作区域"><a href="#工作区域" class="headerlink" title="工作区域"></a>工作区域</h2><ul>
-<li>工作区</li>
-<li>暂存区（stage，index）</li>
-<li>版本库（repo）</li>
-<li>远程仓库（remote repo）</li>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
+<li>链接分析算法</li>
+<li>基于图论：网页是结点，超链接是边，权威性是权重</li>
+<li>系列算法：根据比较点不同有多种变种和优化</li>
+<li>迭代</li>
+<li><img src="pr.svg" alt="PR" title="PageRank"></li>
 </ul>
-<p>以下个人理解：</p>
-<p>工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直接被推送的本地库覆盖或者本地直接拉取远程库内容。</p>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
-<li>系统配置 /etc/gitconfig</li>
-<li>用户配置 ~/gitconfig</li>
-<li>repo配置 .git/config</li>
-</ul>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 设置全局用户名，也可以不使用 global 参数，设置当前.git 的用户名
-git config --global user.name &quot;xxx&quot;
-git config --global user.email xxx
-
-git config --list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="常用-Git-服务器"><a href="#常用-Git-服务器" class="headerlink" title="常用 Git 服务器"></a>常用 Git 服务器</h2><ul>
-<li>Github</li>
-<li>Gitee</li>
-<li>Private Server</li>
-</ul>
-<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 创建
-git init
-git init xxx
-
-## 添加文件
-git add [file1] [file2] ... 
-git add &lt;dir&gt;
-
-## 拷贝
-git clone &lt;repo&gt; &lt;dir&gt;
-
-## 查看
-git status
-git status -s # 简讯
-
-## 比较暂存区和工作区差异
-git diff [file]
-## 比较暂存区和上一次提交的差异
-git diff --cached [file]
-git diff --staged [file]
-## 比较两次提交之间的差异
-git diff [branch1] [branch2]
-
-
-## 提交：暂存区-&gt;本地仓库
-git commit -m [message]
-git commit [file1] [file2] ... -m [message]
-git commit -a # 跳过 git add
-
-## 回退版本
-git reset [--soft | --mixed | --hard] [HEAD]
-
-## 从暂存区和工作区中删除
-git rm &lt;file&gt;
-git rm -f &lt;file&gt;
-## 只从暂存区删除
-git rm --cached &lt;file&gt;
-## 删除目录
-git rm -r *
-
-## 移动
-git mv [file] [newfile]
-git mv -f [file] [newfile]
-
-## 日志
-git log
-git log --oneline
-git log --graph
-git log --reverse
-git log --author&#x3D;xxx
-git log --no-merges
-git log --decorate
-git log --since&#x3D;&#123;...&#125;
-git log --before&#x3D;&#123;...&#125;
-git log --until&#x3D;&#123;...&#125;
-git log --after&#x3D;&#123;...&#125;
-git blame &lt;file&gt;
-
-## 远程仓库
-git remote -v
-git remote show [remote]
-git remote add [shortname] [url]
-git remote rm shortname
-git remote rename old_name new_name
-
-## 抓取
-git fetch [alias]
-git merge [alias]&#x2F;[branch]
-
-git pull &lt;remote_host&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;
-
-## 推送
-git push &lt;remote_host&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;
-
-## 分支管理
-git branch [-d] (branch_name)
-git checkout [-b] (branch_name)
-
-## 标签
-git tag
-git tag -a &lt;tag_name&gt; -m &quot;tag_description&quot;
-git tag -s &lt;tag_name&gt; -m &quot;tag_description&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+]]></content>
       <categories>
         <category>CS</category>
         <category>Network</category>
       </categories>
       <tags>
-        <tag>Remote Access</tag>
+        <tag>Website</tag>
+        <tag>Search Engine</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo+Github</title>
+    <url>/cs/network/hexo-github/</url>
+    <content><![CDATA[<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link"   target="_blank" rel="noopener" href="http://jutraman.tech/cs/network/hexo-apache/" >http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p>
+<ul>
+<li>node.js</li>
+<li>Hexo</li>
+<li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:
+    type: git
+    repo: git@github.com:user_name&#x2F;user_name.github.io
+    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>SSH<ul>
+<li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li>
+<li>私钥和上篇博文一样处理</li>
+</ul>
+</li>
+</ul>
+<h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol>
+<li>新建 repository<ul>
+<li>Owner: user_name</li>
+<li>Repo name: user_name.github.io  # 这个名字是必须的</li>
+<li>Public</li>
+</ul>
+</li>
+<li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li>
+</ol>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      <categories>
+        <category>CS</category>
+        <category>Network</category>
+      </categories>
+      <tags>
+        <tag>Blog</tag>
+        <tag>Website</tag>
       </tags>
   </entry>
   <entry>
@@ -263,42 +215,6 @@ hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span><span><
       </tags>
   </entry>
   <entry>
-    <title>Hexo+Github</title>
-    <url>/cs/network/hexo-github/</url>
-    <content><![CDATA[<h2 id="前置工作"><a href="#前置工作" class="headerlink" title="前置工作"></a>前置工作</h2><p>具体步骤参考 <code>Hexo+apache</code> <a class="link"   target="_blank" rel="noopener" href="http://jutraman.tech/cs/network/hexo-apache/" >http://jutraman.tech/cs/network/hexo-apache/<i class="fas fa-external-link-alt"></i></a> ，除Git,SSH 设置和服务器端设置外，其他相同。</p>
-<ul>
-<li>node.js</li>
-<li>Hexo</li>
-<li>Git  <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">deploy:
-    type: git
-    repo: git@github.com:user_name&#x2F;user_name.github.io
-    branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>SSH<ul>
-<li>github 将公钥添加在 <code>settings-&gt;SSH and GPG Keys</code></li>
-<li>私钥和上篇博文一样处理</li>
-</ul>
-</li>
-</ul>
-<h2 id="服务器端-Github-com"><a href="#服务器端-Github-com" class="headerlink" title="服务器端(Github.com)"></a>服务器端(Github.com)</h2><ol>
-<li>新建 repository<ul>
-<li>Owner: user_name</li>
-<li>Repo name: user_name.github.io  # 这个名字是必须的</li>
-<li>Public</li>
-</ul>
-</li>
-<li>开启 Github Page, 打开 user_name.github.io 测试，一般默认是打开的。</li>
-</ol>
-<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean &amp;&amp; hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
-      <categories>
-        <category>CS</category>
-        <category>Network</category>
-      </categories>
-      <tags>
-        <tag>Blog</tag>
-        <tag>Website</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SSH</title>
     <url>/cs/network/ssh/</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -343,41 +259,125 @@ ssh [-B bind_interface] [-b bind_address] [-c cipher_spec]
       </tags>
   </entry>
   <entry>
-    <title>动手学深度学习-学习笔记1</title>
-    <url>/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>CS</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>Deep Learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PageRank</title>
-    <url>/cs/network/pagerank/</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
-<li>Larry Page</li>
-<li>Google</li>
-<li>不是网页排名的唯一算法</li>
-<li>最早最著名的算法</li>
+    <title>Git</title>
+    <url>/cs/network/git/</url>
+    <content><![CDATA[<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>分布式</li>
+<li>按照元数据存储</li>
+<li>有分支，但没有全局版本号</li>
+<li>SHA-1</li>
 </ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
-<li>链接分析算法</li>
-<li>基于图论：网页是结点，超链接是边，权威性是权重</li>
-<li>系列算法：根据比较点不同有多种变种和优化</li>
-<li>迭代</li>
-<li><img src="pr.svg" alt="PR" title="PageRank"></li>
+<h2 id="工作区域"><a href="#工作区域" class="headerlink" title="工作区域"></a>工作区域</h2><ul>
+<li>工作区</li>
+<li>暂存区（stage，index）</li>
+<li>版本库（repo）</li>
+<li>远程仓库（remote repo）</li>
 </ul>
-]]></content>
+<p>以下个人理解：</p>
+<p>工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直接被推送的本地库覆盖或者本地直接拉取远程库内容。</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>系统配置 /etc/gitconfig</li>
+<li>用户配置 ~/gitconfig</li>
+<li>repo配置 .git/config</li>
+</ul>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 设置全局用户名，也可以不使用 global 参数，设置当前.git 的用户名
+git config --global user.name &quot;xxx&quot;
+git config --global user.email xxx
+
+git config --list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="常用-Git-服务器"><a href="#常用-Git-服务器" class="headerlink" title="常用 Git 服务器"></a>常用 Git 服务器</h2><ul>
+<li>Github</li>
+<li>Gitee</li>
+<li>Private Server</li>
+</ul>
+<h2 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">## 创建
+git init
+git init xxx
+
+## 添加文件
+git add [file1] [file2] ... 
+git add &lt;dir&gt;
+
+## 拷贝
+git clone &lt;repo&gt; &lt;dir&gt;
+
+## 查看
+git status
+git status -s # 简讯
+
+## 比较暂存区和工作区差异
+git diff [file]
+## 比较暂存区和上一次提交的差异
+git diff --cached [file]
+git diff --staged [file]
+## 比较两次提交之间的差异
+git diff [branch1] [branch2]
+
+
+## 提交：暂存区-&gt;本地仓库
+git commit -m [message]
+git commit [file1] [file2] ... -m [message]
+git commit -a # 跳过 git add
+
+## 回退版本
+git reset [--soft | --mixed | --hard] [HEAD]
+
+## 从暂存区和工作区中删除
+git rm &lt;file&gt;
+git rm -f &lt;file&gt;
+## 只从暂存区删除
+git rm --cached &lt;file&gt;
+## 删除目录
+git rm -r *
+
+## 移动
+git mv [file] [newfile]
+git mv -f [file] [newfile]
+
+## 日志
+git log
+git log --oneline
+git log --graph
+git log --reverse
+git log --author&#x3D;xxx
+git log --no-merges
+git log --decorate
+git log --since&#x3D;&#123;...&#125;
+git log --before&#x3D;&#123;...&#125;
+git log --until&#x3D;&#123;...&#125;
+git log --after&#x3D;&#123;...&#125;
+git blame &lt;file&gt;
+
+## 远程仓库
+git remote -v
+git remote show [remote]
+git remote add [shortname] [url]
+git remote rm shortname
+git remote rename old_name new_name
+
+## 抓取
+git fetch [alias]
+git merge [alias]&#x2F;[branch]
+
+git pull &lt;remote_host&gt; &lt;remote_branch&gt;:&lt;local_branch&gt;
+
+## 推送
+git push &lt;remote_host&gt; &lt;local_branch&gt;:&lt;remote_branch&gt;
+
+## 分支管理
+git branch [-d] (branch_name)
+git checkout [-b] (branch_name)
+
+## 标签
+git tag
+git tag -a &lt;tag_name&gt; -m &quot;tag_description&quot;
+git tag -s &lt;tag_name&gt; -m &quot;tag_description&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       <categories>
         <category>CS</category>
         <category>Network</category>
       </categories>
       <tags>
-        <tag>Website</tag>
-        <tag>Search Engine</tag>
+        <tag>Remote Access</tag>
       </tags>
   </entry>
 </search>
