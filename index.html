@@ -260,19 +260,17 @@
                 <div class="home-article-content markdown-body">
                     
                         概述
-Larry Page
-Google
-不是网页排名的唯一算法
-最早最著名的算法
+ * Larry Page
+ * Google
+ * 不是网页排名的唯一算法
+ * 最早最著名的算法
 
 算法
-链接分析算法
-基于图论：网页是结点，超链接是边，权威性是权重
-系列算法：根据比较点不同有多种变种和优化
-迭代
-
-
-
+ * 链接分析算法
+ * 基于图论：网页是结点，超链接是边，权威性是权重
+ * 系列算法：根据比较点不同有多种变种和优化
+ * 迭代
+ *
                     
                 </div>
 
@@ -335,12 +333,19 @@ Google
 
                 <div class="home-article-content markdown-body">
                     
-                        前置工作具体步骤参考 Hexo+apache http://jutraman.tech/cs/network/hexo-apache/ ，除Git,SSH 设置和服务器端设置外，其他相同。
+                        前置工作
+具体步骤参考 Hexo+apache http://jutraman.tech/cs/network/hexo-apache/ ，除Git,SSH 设置和服务器端设置外，其他相同。
 
-node.js
-Hexo
-Git  deploy:
-   ...
+ * node.js
+ * Hexo
+ * Git deploy:
+       type: git
+       repo: git@github.com:user_name/user_name.github.io
+       branch: main
+   
+   
+ * SSH * github 将公钥添加在 settings->SSH and GPG Keys
+    * 私钥和上篇博文一样处
                     
                 </div>
 
@@ -404,18 +409,29 @@ Git  deploy:
                 <div class="home-article-content markdown-body">
                     
                         概述
-静态博客
-基于 Node.js
-适用于 Windows，MacOS，Linux 等系统
-官方文档 https://hexo.io/
+ * 静态博客
+ * 基于 Node.js
+ * 适用于 Windows，MacOS，Linux 等系统
+ * 官方文档 https://hexo.io/
 
-环境本文使用的机器环境为 
+环境
+本文使用的机器环境为 
 
-客户端
-
-macOS Monterey 12+
-Node.js 17.6
-npm...
+ * 客户端
+   
+    * macOS Monterey 12+
+    * Node.js 17.6
+    * npm 8.5
+    * Hexo 6.0
+    * OpenSSH 8.6
+    * Git 2.32
+   
+   
+ * 服务器端
+   
+    * Alibaba Cloud Linux release 3
+    * Apache 2.4.37
+    * Ope
                     
                 </div>
 
@@ -479,16 +495,33 @@ npm...
                 <div class="home-article-content markdown-body">
                     
                         概述
-网络协议
-加密通讯
-OpenSSH
+ * 网络协议
+ * 加密通讯
+ * OpenSSH
 
 原理
-远程主机收到用户的登录请求，将公钥发给用户；
-用户使用公钥，将登录密码加密后，发送给主机；
-远程主机用自己的私钥，解密密码。
+ 1. 远程主机收到用户的登录请求，将公钥发给用户；
+ 2. 用户使用公钥，将登录密码加密后，发送给主机；
+ 3. 远程主机用自己的私钥，解密密码。
 
-中间人攻击密钥本身没有证书中心（CA）公证，攻击者可以冒充服务器，截取登...
+中间人攻击
+密钥本身没有证书中心（CA）公证，攻击者可以冒充服务器，截取登录密码，进而登录服务器。
+
+基本操作
+## 登录
+ssh user@host
+
+## 加密
+ssh-keygen
+
+## 拷贝密钥
+ssh-copy-id
+
+## 添加密钥
+ssh-add
+
+## 详细指令
+ssh [-B bind_interface] [-b bind_address] [-c cip
                     
                 </div>
 
@@ -557,19 +590,20 @@ OpenSSH
                 <div class="home-article-content markdown-body">
                     
                         特点
-分布式
-按照元数据存储
-有分支，但没有全局版本号
-SHA-1
+ * 分布式
+ * 按照元数据存储
+ * 有分支，但没有全局版本号
+ * SHA-1
 
 工作区域
-工作区
-暂存区（stage，index）
-版本库（repo）
-远程仓库（remote repo）
+ * 工作区
+ * 暂存区（stage，index）
+ * 版本库（repo）
+ * 远程仓库（remote repo）
 
 以下个人理解：
-工作区是实际文件增删改查的区域，也是原始操作发生的部分...
+
+工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直
                     
                 </div>
 
