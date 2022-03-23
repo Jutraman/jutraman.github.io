@@ -6,7 +6,7 @@
   <link href="http://139.224.215.237/atom.xml" rel="self"/>
   
   <link href="http://139.224.215.237/"/>
-  <updated>2022-03-19T09:18:37.318Z</updated>
+  <updated>2022-03-23T00:43:16.014Z</updated>
   <id>http://139.224.215.237/</id>
   
   <author>
@@ -21,8 +21,32 @@
     <link href="http://139.224.215.237/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/"/>
     <id>http://139.224.215.237/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/</id>
     <published>2022-03-19T07:37:04.000Z</published>
-    <updated>2022-03-19T09:18:37.318Z</updated>
+    <updated>2022-03-23T00:43:16.014Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="课程概述"><a href="#课程概述" class="headerlink" title="课程概述"></a>课程概述</h2><ul><li>《动手学深度学习》</li><li><a class="link"   target="_blank" rel="noopener" href="https://zh-v2.d2l.ai/" >https://zh-v2.d2l.ai/<i class="fas fa-external-link-alt"></i></a></li><li>B站 李沐 <a class="link"   target="_blank" rel="noopener" href="https://space.bilibili.com/1567748478/" >https://space.bilibili.com/1567748478/<i class="fas fa-external-link-alt"></i></a></li></ul><h2 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h2><ul><li>macOS</li><li>python 3.9</li><li>pytorch-cpu 1.10</li><li>torchvision 0.11</li><li>d2l 0.17</li></ul><h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul><li>原书包含 pytorch，tensorflow 和 mxnet 三种实现</li><li>所有笔记是跟随课程自己实现，可能有和原书不一致的地方，参考原文</li><li>主要使用 pytorch 和 TensorFlow</li></ul><h2 id="数据操作和数据预处理"><a href="#数据操作和数据预处理" class="headerlink" title="数据操作和数据预处理"></a>数据操作和数据预处理</h2><ul><li>numpy</li><li>pandas</li><li>线性代数</li></ul>]]></content>
+    
+    
+    <summary type="html">课程概述
+ * 《动手学深度学习》
+ * https://zh-v2.d2l.ai/
+ * B站 李沐 https://space.bilibili.com/1567748478/
+
+系统配置
+ * macOS
+ * python 3.9
+ * pytorch-cpu 1.10
+ * torchvision 0.11
+ * d2l 0.17
+
+笔记
+ * 原书包含 pytorch，tensorflow 和 mxnet 三种实现
+ * 所有笔记是跟随课程自己实现，可能有和原书不一致的地方，参考原文
+ * 主要使用 pytorch 和 TensorFlow
+
+数据操作和数据预处理
+ * numpy
+ * pandas
+ * 线性代数</summary>
     
     
     
@@ -93,7 +117,12 @@
    
    
  * SSH * github 将公钥添加在 settings-&gt;SSH and GPG Keys
-    * 私钥和上篇博文一样处</summary>
+    * 私钥和上篇博文一样处理
+   
+   
+
+服务器端(Github.com)
+ 1. 新建 repository * Ow</summary>
     
     
     
@@ -141,7 +170,17 @@
    
     * Alibaba Cloud Linux release 3
     * Apache 2.4.37
-    * Ope</summary>
+    * OpenSSH 8.0
+    * Git 2.27
+   
+   
+
+
+
+
+客户端安装
+安装必备程序
+#</summary>
     
     
     
@@ -193,7 +232,8 @@ ssh-copy-id
 ssh-add
 
 ## 详细指令
-ssh [-B bind_interface] [-b bind_address] [-c cip</summary>
+ssh [-B bind_interface] [-b bind_address] [-c cipher_spec] 
+    [-D [bind_address:]port][-E log_fil</summary>
     
     
     
@@ -234,7 +274,10 @@ ssh [-B bind_interface] [-b bind_address] [-c cip</summary>
 
 以下个人理解：
 
-工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直</summary>
+工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直接被推送的本地库覆盖或者本地直接拉取远程库内容。
+
+配置
+ * 系统配置 /etc/gitconfi</summary>
     
     
     

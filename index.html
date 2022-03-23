@@ -201,7 +201,27 @@
 
                 <div class="home-article-content markdown-body">
                     
-                        
+                        课程概述
+ * 《动手学深度学习》
+ * https://zh-v2.d2l.ai/
+ * B站 李沐 https://space.bilibili.com/1567748478/
+
+系统配置
+ * macOS
+ * python 3.9
+ * pytorch-cpu 1.10
+ * torchvision 0.11
+ * d2l 0.17
+
+笔记
+ * 原书包含 pytorch，tensorflow 和 mxnet 三种实现
+ * 所有笔记是跟随课程自己实现，可能有和原书不一致的地方，参考原文
+ * 主要使用 pytorch 和 TensorFlow
+
+数据操作和数据预处理
+ * numpy
+ * pandas
+ * 线性代数
                     
                 </div>
 
@@ -345,7 +365,12 @@
    
    
  * SSH * github 将公钥添加在 settings->SSH and GPG Keys
-    * 私钥和上篇博文一样处
+    * 私钥和上篇博文一样处理
+   
+   
+
+服务器端(Github.com)
+ 1. 新建 repository * Ow
                     
                 </div>
 
@@ -431,7 +456,17 @@
    
     * Alibaba Cloud Linux release 3
     * Apache 2.4.37
-    * Ope
+    * OpenSSH 8.0
+    * Git 2.27
+   
+   
+
+
+
+
+客户端安装
+安装必备程序
+#
                     
                 </div>
 
@@ -521,7 +556,8 @@ ssh-copy-id
 ssh-add
 
 ## 详细指令
-ssh [-B bind_interface] [-b bind_address] [-c cip
+ssh [-B bind_interface] [-b bind_address] [-c cipher_spec] 
+    [-D [bind_address:]port][-E log_fil
                     
                 </div>
 
@@ -603,7 +639,10 @@ ssh [-B bind_interface] [-b bind_address] [-c cip
 
 以下个人理解：
 
-工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直
+工作区是实际文件增删改查的区域，也是原始操作发生的部分；暂存区是对需要版本管理的文件进行监控的区域，是一个包含文件索引的目录树，是一个虚拟工作区，只记录文件状态；版本库包含暂存区和实际文件内容存储部分和改变部分，其中 Head 指针指向 master，但是其中有多个版本，甚至 head 不是暂存区的最新状态；远程仓库更像是一种远程备份或者远程主文件，直接被推送的本地库覆盖或者本地直接拉取远程库内容。
+
+配置
+ * 系统配置 /etc/gitconfi
                     
                 </div>
 
@@ -860,20 +899,5 @@ ssh [-B bind_interface] [-b bind_address] [-c cip
 
 
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 </html>
