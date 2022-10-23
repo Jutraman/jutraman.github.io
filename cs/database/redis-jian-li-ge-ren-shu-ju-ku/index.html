@@ -11,7 +11,7 @@
     
     <title>
         
-            动手学深度学习-学习笔记1 |
+            Redis 建立个人数据库 |
         
         Jutraman&#39;s WorkStation
     </title>
@@ -158,7 +158,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">动手学深度学习-学习笔记1</span>
+            <span class="title-hover-animation">Redis 建立个人数据库</span>
         </div>
 
         
@@ -177,8 +177,8 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fas fa-edit"></i>&nbsp;
-        <span class="pc">2022-03-19 15:37:04</span>
-        <span class="mobile">2022-03-19 15:37</span>
+        <span class="pc">2022-10-23 19:28:24</span>
+        <span class="mobile">2022-10-23 19:28</span>
     </span>
     
         <span class="article-categories article-meta-item">
@@ -190,7 +190,7 @@
                     </li>
                 
                     <li>
-                        &gt; <a href="/categories/CS/AI/">AI</a>&nbsp;
+                        &gt; <a href="/categories/CS/Database/">Database</a>&nbsp;
                     </li>
                 
             </ul>
@@ -202,7 +202,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/Deep-Learning/">Deep Learning</a>&nbsp;
+                        <a href="/tags/Blog/">Blog</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/Database/">Database</a>&nbsp;
                     </li>
                 
             </ul>
@@ -212,7 +216,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>109 Words</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>340 Words</span>
         </span>
     
     
@@ -233,29 +237,55 @@
         
 
         <div class="article-content markdown-body">
-            <h2 id="课程概述"><a href="#课程概述" class="headerlink" title="课程概述"></a>课程概述</h2><ul>
-<li>《动手学深度学习》</li>
-<li><a class="link" target="_blank" rel="external nofollow noopener noreferrer" href="https://zh-v2.d2l.ai/">https://zh-v2.d2l.ai/<i class="fas fa-external-link-alt"></i></a></li>
-<li>B站 李沐 <a class="link" target="_blank" rel="external nofollow noopener noreferrer" href="https://space.bilibili.com/1567748478/">https://space.bilibili.com/1567748478/<i class="fas fa-external-link-alt"></i></a></li>
+            <h2 id="数据库选择"><a href="#数据库选择" class="headerlink" title="数据库选择"></a>数据库选择</h2><h3 id="关系型数据库"><a href="#关系型数据库" class="headerlink" title="关系型数据库"></a>关系型数据库</h3><ul>
+<li>(A)tomic</li>
+<li>(C)onsistency</li>
+<li>(I)solation</li>
+<li>(D)urability</li>
+<li>SQL</li>
+<li>I/O<h3 id="非关系型数据库"><a href="#非关系型数据库" class="headerlink" title="非关系型数据库"></a>非关系型数据库</h3></li>
+<li>key-value</li>
+<li>not support SQL</li>
+<li>Cache</li>
 </ul>
+<p>P.S 如果选择传统关系型数据库，需要有明确的二维关系结构和索引关系；本次实践并没有明确的数据关系，用作个人事务记录，轻量型NoSql也可以满足需求，Redis作为以往没有接触过的数据库，选择Redis作为练手对象。</p>
 <h2 id="系统配置"><a href="#系统配置" class="headerlink" title="系统配置"></a>系统配置</h2><ul>
-<li>macOS</li>
-<li>python 3.9</li>
-<li>pytorch-cpu 1.10</li>
-<li>torchvision 0.11</li>
-<li>d2l 0.17</li>
+<li>MacOS 12+</li>
+<li>Redis 7.2</li>
 </ul>
-<h2 id="笔记"><a href="#笔记" class="headerlink" title="笔记"></a>笔记</h2><ul>
-<li>原书包含 pytorch，tensorflow 和 mxnet 三种实现</li>
-<li>所有笔记是跟随课程自己实现，可能有和原书不一致的地方，参考原文</li>
-<li>主要使用 pytorch 和 TensorFlow</li>
-</ul>
-<h2 id="数据操作和数据预处理"><a href="#数据操作和数据预处理" class="headerlink" title="数据操作和数据预处理"></a>数据操作和数据预处理</h2><ul>
-<li>numpy</li>
-<li>pandas</li>
-<li>线性代数</li>
-</ul>
+<h2 id="数据库安装"><a href="#数据库安装" class="headerlink" title="数据库安装"></a>数据库安装</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">brew install redis
+redis-server # Redis Server Starts in one terminal
+redis-cli # Redis Client Starts in another terminal
+ping # To test status<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># All the cmd should be upper char, but lower char is availble.
+config get config_setting_name [new_config_value]
+# https:&#x2F;&#x2F;www.runoob.com&#x2F;redis&#x2F;redis-conf.html
 
+redis-cli [-h host -p port -a password]
+ping # To test the Redis Running Status
+
+cmd key_name
+# https:&#x2F;&#x2F;www.runoob.com&#x2F;redis&#x2F;redis-keys.html
+# set db_name redis
+# del db_name<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>P.S 整体来看，Redis有点像Python，基本数据类型和操作都类似。</p>
+<h2 id="发布订阅"><a href="#发布订阅" class="headerlink" title="发布订阅"></a>发布订阅</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># Clinet 1
+sbuscribe channel [other_channel]
+# msg...
+unsubscribe channel [other_channel]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># Client 2
+publish channel msg<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># https:&#x2F;&#x2F;www.runoob.com&#x2F;redis&#x2F;redis-pub-sub.html<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>P.S 订阅功能内置链接完全不需要手动操作，只要链接服务器，默认配置。</p>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># https:&#x2F;&#x2F;www.runoob.com&#x2F;redis&#x2F;redis-transactions.html
+multi # pipeline starts
+cmd1
+cmd2
+...
+exec # pipeline runs<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="保存"><a href="#保存" class="headerlink" title="保存"></a>保存</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="关闭"><a href="#关闭" class="headerlink" title="关闭"></a>关闭</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">quit
+redis-cli shutdown<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
         </div>
 
         
@@ -264,7 +294,11 @@
             <ul class="post-tags-box">
                 
                     <li class="tag-item">
-                        <a href="/tags/Deep-Learning/">#Deep Learning</a>&nbsp;
+                        <a href="/tags/Blog/">#Blog</a>&nbsp;
+                    </li>
+                
+                    <li class="tag-item">
+                        <a href="/tags/Database/">#Database</a>&nbsp;
                     </li>
                 
             </ul>
@@ -273,23 +307,11 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev" rel="prev" href="/cs/database/redis-jian-li-ge-ren-shu-ju-ku/">
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">Redis 建立个人数据库</span>
-                                <span class="post-nav-item">Prev posts</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
-                        <a class="next" rel="next" href="/cs/network/pagerank/">
+                        <a class="next" rel="next" href="/cs/ai/dong-shou-xue-shen-du-xue-xi-xue-xi-bi-ji-1/">
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">PageRank</span>
+                                <span class="post-nav-title-item">动手学深度学习-学习笔记1</span>
                                 <span class="post-nav-item">Next posts</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -483,7 +505,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">课程概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">系统配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%94%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">笔记</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C%E5%92%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">4.</span> <span class="nav-text">数据操作和数据预处理</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E9%80%89%E6%8B%A9"><span class="nav-number">1.</span> <span class="nav-text">数据库选择</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.1.</span> <span class="nav-text">关系型数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%9E%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">非关系型数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">系统配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E8%A3%85"><span class="nav-number">3.</span> <span class="nav-text">数据库安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C"><span class="nav-number">4.</span> <span class="nav-text">数据库操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85"><span class="nav-number">5.</span> <span class="nav-text">发布订阅</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98"><span class="nav-number">7.</span> <span class="nav-text">保存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%97%AD"><span class="nav-number">8.</span> <span class="nav-text">关闭</span></a></li></ol>
     </div>
 </div>
         </aside>
